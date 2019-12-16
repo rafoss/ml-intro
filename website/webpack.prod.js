@@ -16,7 +16,7 @@ module.exports = merge(common, {
     mode: `production`,
     output: {
         filename: `[name].[hash].js`,
-        path: path.resolve(__dirname, `build`)
+        path: path.resolve(__dirname, `dist`)
     },
     optimization: {
         minimize: true,
@@ -27,12 +27,13 @@ module.exports = merge(common, {
         new webpack.DefinePlugin({
             'process.browser': 'true'
         }),
-        new CleanWebpackPlugin([`build`]),
+        new CleanWebpackPlugin([`dist`]),
         new CopyWebpackPlugin([
             { from: 'tfmodels/784x100x30x10-bs1000-jpmz/epoch-186', to: 'tfmodel' }
         ]),
         new HtmlWebpackPlugin({
             template: `website/src/index.html`,
+            filename: `../../index.html`,
             inject: false
         }),
         new MiniCssExtractPlugin({
