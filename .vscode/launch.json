@@ -1,0 +1,32 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Simple training",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}/simpletrain.js"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Extremely simple training",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}/extremelysimpletrain.js"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "MNIST training",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}/train.js"
+        }
+    ]
+}
