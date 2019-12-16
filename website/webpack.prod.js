@@ -33,7 +33,6 @@ module.exports = merge(common, {
         ]),
         new HtmlWebpackPlugin({
             template: `website/src/index.html`,
-            filename: `../../index.html`,
             inject: false
         }),
         new MiniCssExtractPlugin({
